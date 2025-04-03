@@ -1,0 +1,15 @@
+[project]
+name = "py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "imbalanced-learn>=0.13.0",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.4",
+    "pandas>=2.2.3",
+    "pyqt6>=6.8.1",
+    "pyside2>=5.15.2.1",
+    "seaborn>=0.13.2",
+]
