@@ -4,6 +4,7 @@ from smote.oversampling_smote import over_sampling_smote
 from method.random_forest import random_forest
 from matplotlib import pyplot as plt
 from sklearn.metrics import confusion_matrix
+from smote.chy_square import chi_square
 
 
 
@@ -49,6 +50,8 @@ df[df.isnull().any(axis=1)]
 X = df.iloc[:,:-1]
 y = df["class"]
 
+# using chy square for better dataset
+chi_square(X, y)
 
 # data imbalance with oversampling smote
 x_smote, y_smote =  over_sampling_smote(X, y)
@@ -78,9 +81,7 @@ ax.xaxis.set_ticklabels(['Negative', 'Positive'])
 ax.yaxis.set_ticklabels([ 'Negative', 'Positive'])
 
 
-plt.savefig("output/confusion_matrix.png")
-
-
+# plt.savefig("output/confusion_matrix.png")
 
 if __name__ == "__main__":
     print(f"Diabetes Classes Count : {L}")
